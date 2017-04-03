@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{4F366450-44D6-4C2F-7EF5-D56FB14289F5}") = "SwiftSwipe", "Assembly-CSharp-firstpass.csproj", "{F52E0ADD-1AB9-B211-C371-DD51127B643F}"
+EndProject
+Project("{4F366450-44D6-4C2F-7EF5-D56FB14289F5}") = "SwiftSwipe", "Assembly-CSharp.csproj", "{DAC268E0-7166-2D56-F09E-EF7068EE651A}"
+EndProject
+Project("{4F366450-44D6-4C2F-7EF5-D56FB14289F5}") = "SwiftSwipe", "Assembly-CSharp-Editor-firstpass.csproj", "{2FE5465B-70DD-A29C-6174-F980CECF8145}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F52E0ADD-1AB9-B211-C371-DD51127B643F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52E0ADD-1AB9-B211-C371-DD51127B643F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52E0ADD-1AB9-B211-C371-DD51127B643F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52E0ADD-1AB9-B211-C371-DD51127B643F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC268E0-7166-2D56-F09E-EF7068EE651A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC268E0-7166-2D56-F09E-EF7068EE651A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC268E0-7166-2D56-F09E-EF7068EE651A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC268E0-7166-2D56-F09E-EF7068EE651A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE5465B-70DD-A29C-6174-F980CECF8145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE5465B-70DD-A29C-6174-F980CECF8145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE5465B-70DD-A29C-6174-F980CECF8145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE5465B-70DD-A29C-6174-F980CECF8145}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
