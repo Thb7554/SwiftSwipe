@@ -16,5 +16,10 @@ public class Click : MonoBehaviour {
             Vector3 screenCor = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 0));
             Instantiate(indict, new Vector3(screenCor.x, screenCor.y,0), new Quaternion());
         }
+        else{
+            foreach(GameObject trail in GameObject.FindGameObjectsWithTag("Trail")){
+                trail.GetComponent<DestroyThis>().destroyBool = true;
+            }
+        }
 	}
 }

@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class DestroyThis : MonoBehaviour {
     public float Timer;
+    public bool destroyBool;
+    private Color originalColor;
+    public Renderer rend;
+    private bool hit;
 	// Use this for initialization
 	void Start () {
-		if (Physics.Raycast(transform.position, transform.forward * -1, 10))
-            print("There is something in front of the object!");
+        hit = true;
+        rend = GetComponent<Renderer>();
+		if (Physics.Raycast(transform.position, transform.forward * 1, 100))
+           rend.material.color = originalColor;
         else
-            print("Nothing!");
+        {
+            hit = false;
+        }
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Timer-= Time.deltaTime;
-        if(Timer < 0){
+        if(!hit)
+        {
+            rend.material.color = new Color(1.0f, (4*Time.time%2)/2,0.0f);
+        }
+        if(destroyBool){
             Destroy(this.gameObject);
         }
 	}
