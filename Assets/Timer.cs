@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Timer : MonoBehaviour {
-
+    private gTimer;
 	// Use this for initialization
 	void Start () {
 		float gTimer = 0.0f;
