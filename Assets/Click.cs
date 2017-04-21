@@ -25,32 +25,22 @@ public class Click : MonoBehaviour {
         {
             Vector3 screenCor = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 0));
             Instantiate(indict, new Vector3(screenCor.x, screenCor.y,0), new Quaternion());
+            this.GetComponent<Timer>().boolOn = true;
         }
         else{
+            this.GetComponent<Timer>().boolOn = false;
+            this.GetComponent<Timer>().finished = false;
             if (startedBool && endedBool)
             {
                 startedBool = false;
                 endedBool = false;
-                scoring = true;
-                score = 100;
+                this.GetComponent<Timer>().finished = true;
             }
             foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
             {
                 //Destory nodes
-                trail.GetComponent<DestroyThis>().destroyBool = true;
-                //If the circuit is completed take a point away for every node
-                if (scoring)
-                {
-                    score--;
-                    //If a node goes outside the bounds subtract more points
-                    if (trail.GetComponent<DestroyThis>().missBool)
-                    {
-                        score -= 10;
-                    }
-                }         
+                trail.GetComponent<DestroyThis>().destroyBool = true;     
             }
-            scoreText.text = "SCORE: " + score;
         }
-        scoring = false;
 	}
 }
