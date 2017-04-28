@@ -41,23 +41,23 @@ public class GameLoop : MonoBehaviour
 		{
 		case 0:
 			gameOver = false;
-			SceneManager.LoadScene("StartMenu"); //Opens start screen
+			SceneManager.LoadScene("Title"); //Opens start screen
 			break;
 
 
 		case 1:
 			gameOver = false;
-			SceneManager.LoadScene("Ilan_debug"); //Loads level (Change name of level as needed)
+			SceneManager.LoadScene("Menu"); //Loads level (Change name of level as needed)
 			break;
 
 		case 2:
-			SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); //Currently loads game over screen
+			SceneManager.LoadScene("Sun_Test2"); //Currently loads game over screen
 			break;
 
-		case 3:
-			SceneManager.LoadScene("PreGame"); //Loads level (Change name of level as needed)
+	/*	case 3:
+			SceneManager.LoadScene("LevelClear",LoadScene.Additive); //Loads level (Change name of level as needed)
 			break;
-
+*/
 		case 4:
 
 			Application.Quit(); //Loads level (Change name of level as needed)
