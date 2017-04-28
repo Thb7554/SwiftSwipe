@@ -33,6 +33,7 @@ public class Click : MonoBehaviour {
             this.GetComponent<Timer>().boolOn = true;
         }
         else{
+            cursor.GetComponent<TrailRenderer>().Clear();
             this.GetComponent<Timer>().boolOn = false;
             foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
             {
@@ -63,6 +64,7 @@ public class Click : MonoBehaviour {
             this.GetComponent<Timer>().boolOn = true;
         }
         else{
+            cursor.GetComponent<TrailRenderer>().Clear();
             this.GetComponent<Timer>().boolOn = false;
             foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
             {
