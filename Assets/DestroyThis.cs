@@ -19,12 +19,15 @@ public class DestroyThis : MonoBehaviour
         rend = GetComponent<Renderer>();
         if (Physics.Raycast(transform.position, transform.forward * 1, out hit))
         {
-            if (hit.transform.tag == "StartZone")
+			if (hit.transform.tag == "StartZone" && !clickManager.GetComponent<Click>().endedBool)
             {
                 clickManager.GetComponent<Click>().startedBool = true;
+				clickManager.GetComponent<Timer> ().boolOn = true;
+
             }
-            else if (hit.transform.tag == "EndZone")
+			else if (hit.transform.tag == "EndZone" &&  clickManager.GetComponent<Click>().startedBool)
             {
+				//clickManager.GetComponent<Timer>().boolOn = false;
                 clickManager.GetComponent<Click>().endedBool = true;
             }
         }

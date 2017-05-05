@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour {
             gTimerMS = 0;
         }
         if(!finished){
-            timerText.text = gTimerMS.ToString("f3");
+            timerText.text = "TIME: " + gTimerMS.ToString("f3");
         }
 
 		

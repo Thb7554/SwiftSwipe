@@ -24,13 +24,42 @@ public class Click : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButton(0))
-        {
-            startedBool = false;
-            endedBool = false;
+		{
+			outOfBounds = false; 
+			this.GetComponent<Timer>().finished = false;
+			Vector3 screenCor = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 0));
+			Instantiate(indict, new Vector3(screenCor.x, screenCor.y,0), new Quaternion());
+			cursor.transform.position = screenCor + new Vector3(0,0,10);
+			//this.GetComponent<Timer> ().boolOn = true;
+		}
+		else{
+			this.GetComponent<Timer>().boolOn = false;
+			foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
+			{
+				if(!outOfBounds && trail.GetComponent<DestroyThis>().missBool){
+					outOfBounds = true;
+				}
+				//Destroy nodes
+				trail.GetComponent<DestroyThis>().destroyBool = true;     
+			}
+			if (!outOfBounds && startedBool && endedBool) //If all are triggered, you were on the path
+			{
+				this.GetComponent<Timer>().finished = true;
+			}
+			startedBool = false;
+			endedBool = false;
+
+		}
+
+		//Mobile
+		/*
+        if(Input.touchCount > 0){
+            Touch touch = Input.GetTouch(0);
             outOfBounds = false;
             this.GetComponent<Timer>().finished = false;
             Vector3 screenCor = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 0));
             Instantiate(indict, new Vector3(screenCor.x, screenCor.y,0), new Quaternion());
+
             cursor.transform.position = screenCor + new Vector3(0,0,10);
             this.GetComponent<Timer>().boolOn = true;
         }
@@ -47,8 +76,14 @@ public class Click : MonoBehaviour {
             if (!outOfBounds && startedBool && endedBool)
             {
                 this.GetComponent<Timer>().finished = true;
-            }
+                       startedBool = false;
+            endedBool = false;
             
         }
+        
 	}
+*/
+
+}
+
 }
