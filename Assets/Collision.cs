@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyThis : MonoBehaviour
+public class Collision : MonoBehaviour
 {
     public float Timer;
     public bool destroyBool;
