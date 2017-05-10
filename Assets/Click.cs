@@ -37,11 +37,11 @@ public class Click : MonoBehaviour {
 			this.GetComponent<Timer>().boolOn = false;
 			foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
 			{
-				if(!outOfBounds && trail.GetComponent<DestroyThis>().missBool){
+				if(!outOfBounds && trail.GetComponent<Collision>().missBool){
 					outOfBounds = true;
 				}
 				//Destroy nodes
-				trail.GetComponent<DestroyThis>().destroyBool = true;     
+				trail.GetComponent<Collision>().destroyBool = true;     
 			}
 			if (!outOfBounds && startedBool && endedBool) //If all are triggered, you were on the path
 			{
@@ -69,11 +69,11 @@ public class Click : MonoBehaviour {
             this.GetComponent<Timer>().boolOn = false;
             foreach (GameObject trail in GameObject.FindGameObjectsWithTag("Trail"))
             {
-                if(!outOfBounds && trail.GetComponent<DestroyThis>().missBool){
+                if(!outOfBounds && trail.GetComponent<Collision>().missBool){
                     outOfBounds = true;
                 }
                 //Destroy nodes
-                trail.GetComponent<DestroyThis>().destroyBool = true;     
+                trail.GetComponent<Collision>().destroyBool = true;     
             }
             if (!outOfBounds && startedBool && endedBool)
             {
