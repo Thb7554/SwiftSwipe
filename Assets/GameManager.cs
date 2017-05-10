@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+	public int levelNum;
 	// Use this for initialization
 	void Start () {
 		

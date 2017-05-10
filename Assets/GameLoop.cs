@@ -8,6 +8,8 @@ public class GameLoop : MonoBehaviour
 {
 	private int value; //Checks the current state
 	private bool gameOver = false;
+	GameManager gm;
+	//private int levelNum = gm.GetComponent<GameManager>.levelNum();
 
 	// Use this for initialization
 	void Start()
@@ -19,12 +21,6 @@ public class GameLoop : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
-		//Code to ignore keys
-
-		//while (value != 2) {
-		//    use keys here for pausing
-		//}
 
 	}
 
@@ -51,7 +47,8 @@ public class GameLoop : MonoBehaviour
 			break;
 
 		case 2:
-			SceneManager.LoadScene("Sun_Test2"); //Currently loads game over screen
+			//SceneManager.LoadScene("Scene" + levelNum); //Will be altered and prepped to work with the Menu Screen level select
+			SceneManager.LoadScene("Scene1");//loads level screen
 			break;
 
 	/*	case 3:
