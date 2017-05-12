@@ -43,7 +43,7 @@ public class GameLoop : MonoBehaviour
 
 		case 1:
 			gameOver = false;
-			SceneManager.LoadScene("Menu"); //Loads level (Change name of level as needed)
+			SceneManager.LoadScene("StartMenu"); //Loads level (Change name of level as needed)
 			break;
 
 		case 2:
