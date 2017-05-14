@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGME_450_SwiftSwipe.Plugins", "IGME_450_SwiftSwipe.Plugins.csproj", "{34F9E914-9057-285B-8DA2-6AC85F36B952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGME_450_SwiftSwipe", "IGME_450_SwiftSwipe.csproj", "{EAAF348B-CCEF-F70A-9FF7-F2EFFB12B9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGME_450_SwiftSwipe.Editor.Plugins", "IGME_450_SwiftSwipe.Editor.Plugins.csproj", "{9E03DCD9-153A-83B1-CBD5-7A5FBBD5B220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGME_450_SwiftSwipe.Editor", "IGME_450_SwiftSwipe.Editor.csproj", "{F3339340-72CD-73DF-F51B-B6F5EA23F903}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34F9E914-9057-285B-8DA2-6AC85F36B952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F9E914-9057-285B-8DA2-6AC85F36B952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F9E914-9057-285B-8DA2-6AC85F36B952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F9E914-9057-285B-8DA2-6AC85F36B952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAAF348B-CCEF-F70A-9FF7-F2EFFB12B9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAF348B-CCEF-F70A-9FF7-F2EFFB12B9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAF348B-CCEF-F70A-9FF7-F2EFFB12B9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAAF348B-CCEF-F70A-9FF7-F2EFFB12B9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E03DCD9-153A-83B1-CBD5-7A5FBBD5B220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E03DCD9-153A-83B1-CBD5-7A5FBBD5B220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E03DCD9-153A-83B1-CBD5-7A5FBBD5B220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E03DCD9-153A-83B1-CBD5-7A5FBBD5B220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3339340-72CD-73DF-F51B-B6F5EA23F903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3339340-72CD-73DF-F51B-B6F5EA23F903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3339340-72CD-73DF-F51B-B6F5EA23F903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3339340-72CD-73DF-F51B-B6F5EA23F903}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
