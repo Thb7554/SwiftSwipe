@@ -48,10 +48,17 @@ public class Timer : MonoBehaviour {
             {
                 PlayerPrefs.SetFloat("Level" + currentLevel + "Time", time);
             }
+            else
+            {
+                PlayerPrefs.SetFloat("Level" + currentLevel + "Low", time);
+            }
 
             PlayerPrefs.SetInt("OpenLevelSelect", 1);
-            SceneManager.LoadScene("StartMenu");
-		}
+            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+            //SceneManager.LoadScene("StartMenu");
+            finished = false;
+            SceneManager.LoadScene("LevelFinish");
+        }
 
 		
 

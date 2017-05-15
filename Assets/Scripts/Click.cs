@@ -81,6 +81,7 @@ public class Click : MonoBehaviour
                 this.GetComponent<Timer>().finished = true;
                 this.GetComponent<Timer>().boolOn = false;
             }
+        }
          else{
             cursor.GetComponent<TrailRenderer>().material.color = Color.white;
             cursor.GetComponent<TrailRenderer>().Clear();
@@ -89,7 +90,6 @@ public class Click : MonoBehaviour
 			endedBool = false;
             outOfBounds = false;
          }
-	}
 #endif
 
     }

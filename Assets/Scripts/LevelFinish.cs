@@ -10,14 +10,21 @@ public class LevelFinish : MonoBehaviour {
 	private Button replayButton;
 	private Button quitButton;
 	public Text timerText;
+    public int currentLevel;
 
 	void Start () {
-		timerText.text = 0.225 + " sec.";
+        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+
+		timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
 	}
 
 	void displayResult(){
-		timerText.text = 0.225 + " sec.";
+		timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
 	}
+
+    public void ResetLevel() {
+        SceneManager.LoadScene("Scene" + currentLevel);
+    }
 
 	public void SetLevel(int level){
 		if (level != null) { 
