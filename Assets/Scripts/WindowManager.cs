@@ -37,6 +37,11 @@ public class WindowManager : MonoBehaviour {
 
 	void Start(){
 		GenericWindow.manager = this;
-		Open (defaultWindowID);
+
+        int windowID = PlayerPrefs.GetInt("OpenLevelSelect");
+
+
+
+		Open (windowID);
 	}
 }

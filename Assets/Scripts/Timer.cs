@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
@@ -10,8 +11,9 @@ public class Timer : MonoBehaviour {
 	public Text timerText;
     public bool boolOn;
     public bool finished;
-	// Use this for initialization
-	void Start () {
+    public int currentLevel;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -28,18 +30,31 @@ public class Timer : MonoBehaviour {
             //timerText.text = gTimerSec + "\"" + gTimerMS;
             
             
-            timerText.text = gTimerMS.ToString("f3");
+           // timerText.text = gTimerMS.ToString("f3");
             // = gTimerSec + "\"" + gTimerMS;
         }
         else
         {
-            gTimerMS = 0;
+            if(!finished)
+                gTimerMS = 0;
         }
-        if(!finished){
-            timerText.text = "TIME: " + gTimerMS.ToString("f3");
-        }
+		if (!finished) {
+			timerText.text = "TIME: " + gTimerMS.ToString ("f3");
+		} else {
+            Debug.Log("Finish " + gTimerMS.ToString("f3"));
+            float time = gTimerMS;
+            float topScore = PlayerPrefs.GetFloat("Level" + currentLevel + "Time");
+            if (time < topScore || topScore == 0)
+            {
+                PlayerPrefs.SetFloat("Level" + currentLevel + "Time", time);
+            }
+
+            PlayerPrefs.SetInt("OpenLevelSelect", 1);
+            SceneManager.LoadScene("StartMenu");
+		}
 
 		
 
 	}
+
 }
