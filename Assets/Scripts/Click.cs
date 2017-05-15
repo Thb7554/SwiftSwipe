@@ -61,7 +61,6 @@ public class Click : MonoBehaviour
 #if UNITY_ANDROID
         if(Input.touchCount > 0){
             Touch touch = Input.GetTouch(0);
-            outOfBounds = false;
             this.GetComponent<Timer>().finished = false;
             Vector3 screenCor = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 0));
             Instantiate(indict, new Vector3(screenCor.x, screenCor.y,0), new Quaternion());

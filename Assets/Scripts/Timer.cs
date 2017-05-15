@@ -48,10 +48,8 @@ public class Timer : MonoBehaviour {
             {
                 PlayerPrefs.SetFloat("Level" + currentLevel + "Time", time);
             }
-            else
-            {
-                PlayerPrefs.SetFloat("Level" + currentLevel + "Low", time);
-            }
+
+            PlayerPrefs.SetFloat("Level" + currentLevel + "Low", time);
 
             PlayerPrefs.SetInt("OpenLevelSelect", 1);
             PlayerPrefs.SetInt("CurrentLevel", currentLevel);
