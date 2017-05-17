@@ -15,12 +15,28 @@ public class LevelFinish : MonoBehaviour {
 	void Start () {
         currentLevel = PlayerPrefs.GetInt("CurrentLevel");
 
-		timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
-	}
+        if (PlayerPrefs.GetFloat("Level" + currentLevel + "Low") > PlayerPrefs.GetFloat("Level" + currentLevel + "Time"))
+        {
+            timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
+        }
+        else
+        {
+            timerText.text = "NEW HIGHSCORE!!!";
+        }
+        timerText.text += "\n Highscore " + PlayerPrefs.GetFloat("Level" + currentLevel + "Time") + " sec.";
+    }
 
 	void displayResult(){
-		timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
-	}
+        if(PlayerPrefs.GetFloat("Level" + currentLevel + "Low") > PlayerPrefs.GetFloat("Level" + currentLevel + "Time"))
+        {
+            timerText.text = PlayerPrefs.GetFloat("Level" + currentLevel + "Low") + " sec.";
+        }
+        else
+        {
+            timerText.text = "NEW HIGHSCORE!!!";
+        }
+        timerText.text += "\n Highscore " + PlayerPrefs.GetFloat("Level" + currentLevel + "Time") + " sec.";
+    }
 
     public void ResetLevel() {
         SceneManager.LoadScene("Scene" + currentLevel);
